@@ -1,4 +1,7 @@
 #include <vector>
+#include <ctime>
+#include <cstdlib>
+
 class NeuralNetwork{
     public:
         NeuralNetwork(int num_inputs, int num_outputs, std::vector<int> layer_sizes)
@@ -14,14 +17,31 @@ class NeuralNetwork{
             biases_[i].resize(layer_sizes_[i]);
           }
         }
+      void initialize(){
+        initializeWeightsandBiases();
+      }
+      std::vector<std::vector<float> > getWeights(){
+        return weights_;
+      }
+      std::vector<std::vector<float> > getBiases(){
+        return biases_;
+      }
+      
     private:
+      
       int num_inputs_;
       int num_outputs_;
       std::vector<int> layer_sizes_;
       std::vector<std::vector<float> > weights_;
       std::vector<std::vector<float> > biases_;
 
-      void initializeWeightsandBiases(int num_layers){
+      void initializeWeightsandBiases(){
+        for (int i = 0; i < layer_sizes_.size(); i++){
+          for (int j =0; j < layer_sizes_[i]; j++) {
+            weights_[i][j] = -1 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2)));
+            biases_[i][j] = -1 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2)));
+          }
+        }
         
       }
 };
