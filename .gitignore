@@ -35,7 +35,7 @@
 *.dSYM
 *.vscode
 
-*
-!*.hpp
-!*.cpp
+#Executables
+main
+neural_network
 
