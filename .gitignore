@@ -35,3 +35,7 @@
 *.dSYM
 *.vscode
 
+*
+!*.hpp
+!*.cpp
+
