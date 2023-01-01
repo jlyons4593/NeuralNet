@@ -36,8 +36,10 @@
 *.dSYM
 *.vscode
 
-dev
+
+*dev
 #Executables
-main
-neural_network
+*main
+*neural_network
+
 
