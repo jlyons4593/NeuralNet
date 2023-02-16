@@ -33,8 +33,16 @@
 *.exe
 *.out
 *.app
+*.o
 
 #VSCode files
 *.dSYM
 *.vscode
+
+
+*dev
+#Executables
+*main
+*neural_network
+
 
