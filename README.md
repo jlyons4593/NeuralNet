@@ -5,8 +5,7 @@ This is my project where I plan to create a neural network from scratch in c++. 
 3. I wanted to use this opportunity to improve on my modern c++ coding.
 4. I wanted to gain a better understnading of lower level object oriented code.
 
-# Steps I'm taking to develop this 
+# ToDo
 
-1. Determine a model architecture i.e the number of layers in the model and how many nodes will be in each layer. 
-2. Utilise Xavier initialisation to initialise weights and biases of each of the nodes in each layer.
-3. 
+1. Develop script to generate training data to test with.
+2. Clean up code.
